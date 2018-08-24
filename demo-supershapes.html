@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>P5js</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <!-- external css -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.js"></script>
+
+    <!-- internal css -->
+	<style>
+	
+	 body{
+		font-family: "Roboto,Helvetica Neue",Helvetica,Arial,sans-serif; 
+	 }
+	 #container{
+		 padding-top: 30px;
+		 padding-left:50px;
+		 width:90%;
+	 }
+	 
+	 
+	h5 {
+		color: #2e44b9;
+		font-weight: bold;
+		font-size: 24px;;
+	}
+	
+	#formZone{
+		font-size:14px;
+		margin-top:10px;
+	}
+	
+	#formZone label{
+		position:absolute;
+		width:200px;
+		margin-bottom:10px;
+		 user-select: none;
+	}
+	
+	#formZone select{
+		margin-left:220px;
+		margin-bottom:10px;
+		width:160px;
+	}
+	
+	#formZone input{
+		margin-left:220px;
+		margin-bottom:10px;
+	}
+	
+	
+	
+	</style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <div class="btn-group" style="margin-top: 8px;margin-right:10px;">
+                </div>
+                <a class="navbar-brand" href="#">
+					Experiments with p5.js
+                </a>
+            </div>
+            <ul class="nav navbar-nav">
+				<li id="supershapes" class="active"><a href="#supershapes">3D Supershapes</a></li>
+                <li id="blog"><a href="https://philippemarcmeyer.github.io#canvas">Github Blog</a></li>
+                <li id="repos"><a href="https://github.com/PhilippeMarcMeyer">Github repos</a></li>
+            </ul>
+        </div>
+    </nav>
+  <div id="container">
+  
+	  
+ <div id="supershapesZone" >
+	  <h5>3D Supershapes</h5>
+	  <p>This is a personnal translation in javascript/p5.js of 
+	     Daniel Shiffman's coding challenge : 3D Supershapes
+	  </a> from processing (java)
+	  </p>
+	  </div>
+	  <div id="canvasZone"></div>
+	  <div id="formZone">
+		<div id="modelZone"></div>
+			<div>
+				<label>Select your colors : </label>
+				<select id="select-colors">
+					<option value="wireframe">wireframe</option>
+					<option value="europa">europa</option>
+					<option value="rainbow">rainbow</option>
+					<option value="lilac">lilac</option>
+					<option value="strawberry">strawberry</option>
+					<option value="blue">blue</option>
+					<option value="mint">mint</option>
+					<option value="black">black</option>
+					<option value="autumn">autumn</option>
+				</select>
+			</div>
+			<div>
+				<label>Moving colors : </label>
+				<input type="checkbox" style="width:18px;height:18px;" id="movingOn"/>
+			</div>
+			<div>
+				<label>Auto-rotation : </label>
+				<input type="checkbox" style="width:18px;height:18px;" id="autoRotationOn"/>
+			</div>			
+			<div>
+				<label>Definition : <span id="definitionValue" class="label label-default"></span></label>
+				<input type="range" id="definitionChosen" min="10" max="100" step="1" style="width:200px;">
+			</div>	
+			<div>
+				<label>Latitude zoom : <span id="latZoomValue" class="label label-default">1</span></label>
+				<input type="range" id="latZoomChosen" min="0.1" max="1" step="0.1"  value= "1" style="width:200px;">
+			</div>		
+			<div>
+				<label>Longitude zoom : <span id="lonZoomValue" class="label label-default">1</span></label>
+				<input type="range" id="lonZoomChosen" min="0.1" max="1" step="0.1" value= "1" style="width:200px;">
+			</div>				
+	  </div>
+
+  </div>
+  
+  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+	  <script src="./demo-supershapes.js"></script>
+	  
+	<script>  
+	
+	 </script>  
+</html>
